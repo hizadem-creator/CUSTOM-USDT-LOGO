@@ -1,0 +1,7 @@
+{
+  "name": "USDT",
+  "symbol": "USDT",
+  "decimals": 18,
+  "erc20": true,
+  "logo": "logo.png"
+}
