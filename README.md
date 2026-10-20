@@ -1,4 +1,18 @@
-# Independent BSC Token — Project Information
+# Independent Token Metadata — TRON and BSC
+
+## TRON Mainnet — THFpn
+
+- Contract: THFpnLfqHzU58agVyzkkDncvXFSKr8hsV3
+- Project-reported token name and symbol: USDT.T / USDT.T
+- Project-reported decimals: 6
+- Details and evidence limits: [TRON-USDT-T.md](./TRON-USDT-T.md)
+- Explorer: https://tronscan.org/#/token20/THFpnLfqHzU58agVyzkkDncvXFSKr8hsV3
+
+These identification fields follow the existing project records.
+Live explorer and on-chain getter confirmation was unavailable during
+the 2026-10-20 review.
+
+## Separate BSC token — existing project information
 ![Project logo](./logo.png)
 This independently issued token is not affiliated with, issued by, or endorsed by Tether.
 
